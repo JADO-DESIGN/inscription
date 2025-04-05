@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription - Formation Design Graphique</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .form-container {
+    background-image: url('image de moi.jpg'); /* Image d’arrière-plan */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 20px; /* Ajoute un peu d’espace intérieur */
+    border-radius: 10px; /* Coins arrondis */
+}
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #444;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Fiche d'inscription à la formation en design graphique</h2>
+    <form action="https://formspree.io/f/xjkyazgn" method="POST">
+      <label>Nom & Prénom :</label>
+      <input type="text" name="nom" required>
+
+      <label>Âge :</label>
+      <input type="number" name="age">
+
+      <label for="sexe">Sexe :</label>
+      <select id="sexe">
+          <option value="" selected hidden></option>
+          <option value="Masculin">Masculin</option>
+          <option value="Féminin">Féminin</option>
+      </select>
+      
+
+      <label>Téléphone WhatsApp :</label>
+      <input type="tel" name="telephone" required>
+
+      <label>Email :</label>
+      <input type="email" name="email" required>
+
+      <label for="experience">Niveau d'expérience en graphisme :</label>
+<select id="experience">
+    <option value="" selected hidden></option>
+    <option value="debut">Débutant</option>
+    <option value="traail">Intermédiaire</option>
+    <option value="professionnel">Avancé</option>
+</select>
+
+<label for="formation">Formation choisie :</label>
+<select id="formation">
+    <option value="" selected hidden></option>
+    <option value="Design graphique et création visuelle">Design graphique et création visuelle</option>
+    <option value="Photoshop et Illustrator">Photoshop et Illustrator</option>
+    <option value="Conception web">Conception web</option>
+    <option value="Motion design">Motion design</option>
+</select>
+
+<label for="mode de formation">Mode de Formation :</label>
+<select id="mode de formation">
+    <option value="" selected hidden></option>
+    <option value="Présentiel">Présentiel</option>
+    <option value="en ligne">En ligne</option>
+</select>
+
+<label for="durée de formation">Durée de formation :</label>
+<select id="Durée de formation">
+    <option value="" selected hidden></option>
+    <option value="1 mois">1 mois</option>
+    <option value="3 mois">3 mois</option>
+    <option value="6 mois">6 mois</option>
+    <option value="9 mois">9 mois ou plus</option>
+</select>
+
+<label for="Frais d'inscription">Frais d'inscription :</label>
+<select id="Frais d'inscription">
+    <option value="" selected hidden></option>
+    <option value="10 $">10 $ pour Design graphique</option>
+    <option value="15">15 $ pour Conception web</option>
+    <option value="15 £">15 $ Motion de design</option>
+</select>
+
+
+<label for="mode de paiement">Mode de paiement :</label>
+<select id="mode de paiement">
+    <option value="" selected hidden></option>
+    <option value="Argent">Espèces</option>
+    <option value="Mobile">Mobile money</option>
+    <option value="banque">Virement bancaire</option>
+</select>
+
+<label for="Préférence de paiement">Préférence de paiement :</label>
+<select id="Préférence de paiement">
+    <option value="" selected hidden></option>
+    <option value="Espèces">Orange money</option>
+    <option value="Mobile money">Airtel money</option>
+    <option value="Virement bancaire">Mpesa</option>
+</select>
+
+      <label>Logiciels déjà utilisés (Photoshop, Illustrator, etc.) :</label>
+      <input type="text" name="logiciels">
+
+      <label>Adresse (quartier / commune) :</label>
+      <input type="text" name="adresse">
+
+      <label>Disponibilité (jours & heures) :</label>
+      <input type="text" name="disponibilite">
+
+      <label>Pourquoi souhaitez-vous suivre cette formation ?</label>
+      <textarea name="motivation" rows="4"></textarea>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('experience').addEventListener('focus', function() {
+        let firstOption = this.querySelector('option[value=""]');
+        if (firstOption) {
+            firstOption.remove();
+        }
+    });
+</script>
+</body>
+</html>
